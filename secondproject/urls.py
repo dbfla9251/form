@@ -30,8 +30,7 @@ urlpatterns = [
     path('portfolio/', portfolio.views.portfolio, name='portfolio'),
     path('accounts/signup' , accounts.views.signup,name="signup"),
     path('accounts/login' , accounts.views.login,name="login"),
-     path('accounts/logout/', accounts.views.logout, name='logout'),
-
+    path('blog/newblog/',blog.views.blogpost,name='nowblog')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
