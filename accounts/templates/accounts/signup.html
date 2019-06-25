@@ -6,10 +6,17 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">LikeLion</a>
+        <a class="navbar-brand" href="#">Sign Up</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+        </div>
     </nav>
     <h1>Sign Up!</h1>
     <form method="POST" action="{% url 'signup' %}">
@@ -28,8 +35,5 @@
         <br>
         <br>
         <input class="btn btn-primary" type="submit" value="Sign Up!">
-    </form>
-    <form id="logout" method="POST" action="{% url 'logout' %}">
-        {% csrf_token %} <input type="hidden" />
     </form>
 </body>

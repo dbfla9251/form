@@ -38,3 +38,4 @@ def blogpost(request):
     else:
         form = BlogPost()
         return render(request,'blog/newform.html',{'form':form})
+
